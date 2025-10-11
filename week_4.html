@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="week_4.css">
+</head>
+<body>
+  <main class="form-container">
+    <h1>Job Application Form</h1>
+    <form action="/submit-application" method="post" novalidate>
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="example@email.com">
+      </div>
+
+      <!-- Job Position -->
+      <div class="form-group">
+        <label for="position">Job Position</label>
+        <select id="position" name="position" required>
+          <option value="">Select a position</option>
+          <option value="developer">Web Developer</option>
+          <option value="designer">UI/UX Designer</option>
+          <option value="manager">Project Manager</option>
+          <option value="analyst">Data Analyst</option>
+        </select>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="form-group form-full">
+        <label for="experience">Work Experience</label>
+        <textarea id="experience" name="experience" rows="5" placeholder="Describe your work experience..." required></textarea>
+      </div>
+
+      <!-- Terms Agreement -->
+      <div class="form-group form-full checkbox-group">
+        <label>
+          <input type="checkbox" name="terms" required>
+          I agree to the terms and conditions.
+        </label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-buttons form-full">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
